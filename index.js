@@ -1,6 +1,9 @@
 const path = require('path');
 
-const pagesPreimport = ({ nextPath = '.next', verbose = false }) => {
+const pagesPreimport = (options) => {
+  const nextPath = options?.nextPath || '.next';
+  const verbose = options?.verbose || false;
+
   try {
     const serverPath = path.join(path.resolve('.'), nextPath, 'server');
     const pagesManifest = require(path.join(serverPath, 'pages-manifest.json'));
