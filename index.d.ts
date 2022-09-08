@@ -3,4 +3,4 @@ type Options = {
   verbose?: boolean;
 };
 
-export default function nextPagesPreimport(Options): void;
+export default function nextPagesPreimport(options?: Options): void;
